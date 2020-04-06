@@ -1,0 +1,62 @@
+$ns: '.navigation';
+
+$mainFont: "SF Pro Text","Myriad Set Pro","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+$mainFontSize: 18px;
+$mainContainerSize: 1024px;
+$black: #333;
+$lightGray: #d3d3d3;
+$lightBlue: #add8e6;
+
+#{$ns} {
+    font-family: $mainFont;
+    font-size: $mainFontSize;
+    padding: 60px 0;
+
+    &__menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        max-width: $mainContainerSize;
+        width: 100%;
+        margin: 0 auto;
+        border-bottom: 1px solid $lightGray;
+    }
+
+    &__slider {
+        max-width: $mainContainerSize;
+        width: 100%;
+        margin: 0 auto;
+        height: 1px;
+    }
+
+    &__line {
+        width: 0;
+        height: 1px;
+        position: absolute;
+        background: $black;
+        top: 98px;
+        transition: 0.4s;
+    }
+
+    &__item {
+        color: $lightGray;
+        padding: 0 0 10px;
+        cursor: pointer;
+        transition: 0.4s;
+
+        &:hover {
+            color: $lightBlue;
+        }
+
+        &.active {
+            color: $black;
+        }
+    }
+
+    &__time {
+        text-align: center;
+        padding: 15px;
+        color: $lightGray
+    }
+}
